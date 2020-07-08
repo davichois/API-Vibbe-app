@@ -28,5 +28,5 @@ app.use(express.static("public"));
 
 //Escuchando
 app.listen(config.api.port, () => {
-  console.log(`Estoy en ${config.api.host}`);
+  console.log(`Estoy en: http://localhost:${config.api.port}`);
 });
