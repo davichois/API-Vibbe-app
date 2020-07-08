@@ -18,7 +18,8 @@ app.use(cors());
 //Routas&&TodoRutas
 app.get("/api", (req, res) => {
   res.json({
-    departamento: `${config.api.host}/api/covid19`,
+    Produccion: `${config.api.host}/api/covid19`,
+    Dessarrollo: `http://localhost:${config.api.port}/api/covid19`,
   });
 });
 routes(app);
