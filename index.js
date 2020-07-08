@@ -18,7 +18,7 @@ app.use(cors());
 //Routas&&TodoRutas
 app.get("/api", (req, res) => {
   res.json({
-    departamento: `http://localhost:${config.api.port}/api/covid19`,
+    departamento: `https://vibbeapp.herokuapp.com/api/covid19`,
   });
 });
 routes(app);
