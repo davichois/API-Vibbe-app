@@ -28,8 +28,7 @@ class DepartamentosController {
   }) {
     let banderaUrl = "";
     if (bandera) {
-      banderaUrl =
-        `http://localhost:${config.api.port}/files/` + bandera.filename;
+      banderaUrl = `${config.api.host}/files/` + bandera.filename;
     }
     const create = new Departamentos({
       departamento: departamento,
@@ -52,8 +51,7 @@ class DepartamentosController {
   }) {
     let banderaUrl = "";
     if (bandera) {
-      banderaUrl =
-        `http://localhost:${config.api.port}/files/` + bandera.filename;
+      banderaUrl = `${config.api.host}/files/` + bandera.filename;
     }
     const update = await Departamentos.findOneAndUpdate(
       { _id: DepartamentoId },

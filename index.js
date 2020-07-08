@@ -18,7 +18,7 @@ app.use(cors());
 //Routas&&TodoRutas
 app.get("/api", (req, res) => {
   res.json({
-    departamento: `https://vibbeapp.herokuapp.com/api/covid19`,
+    departamento: `${config.api.host}/api/covid19`,
   });
 });
 routes(app);
@@ -28,5 +28,5 @@ app.use(express.static("public"));
 
 //Escuchando
 app.listen(config.api.port, () => {
-  console.log(`Estoy en : http://localhost:${config.api.port}`);
+  console.log(`Estoy en ${config.api.host}`);
 });
