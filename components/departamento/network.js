@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const path = require("path");
-const response = require("../network/response");
+const response = require("../../network/response");
 const multer = require("multer");
 
 const DepartamentosController = require("./controller");
@@ -40,7 +40,7 @@ router.get("/:DepartamentoId", async (req, res) => {
 });
 
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, "../public/files"),
+  destination: path.resolve("public/files"),
   filename: (req, file, cb) => {
     cb(null, file.originalname);
   },
@@ -48,7 +48,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  dest: path.join(__dirname, "../public/files"),
+  dest: path.resolve("/public/files"),
 }).single("bandera");
 
 router.post("/", upload, async (req, res) => {

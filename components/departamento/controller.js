@@ -1,5 +1,5 @@
 const Departamentos = require("./model");
-const { config } = require("../config");
+const { config } = require("../../config");
 
 class DepartamentosController {
   async getDepartamentos({ departamento }) {
